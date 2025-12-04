@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamui Video Editor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ====== HEADER / NAVIGATION ====== -->
+    <header>
+        <h1>Kamui Video Editor</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#editor">Editor</a></li>
+                <li><a href="#export">Export</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ====== HOME SECTION ====== -->
+    <section id="home">
+        <h2>Welcome to Kamui Video Editor</h2>
+        <p>Create, edit, and export videos easily. Perfect for AMVs and multi-clip projects.</p>
+        <button onclick="goToUpload()">Start Editing</button>
+    </section>
+
+    <!-- ====== UPLOAD SECTION ====== -->
+    <section id="upload">
+        <h2>Upload Your Clips</h2>
+        <input type="file" id="videoUpload" multiple accept="video/*">
+        <div id="uploadedFiles">
+            <p>No files uploaded yet.</p>
+        </div>
+        <button onclick="goToEditor()">Go to Editor</button>
+    </section>
+
+    <!-- ====== EDITOR WORKSPACE ====== -->
+    <section id="editor">
+        <h2>Editor Workspace</h2>
+
+        <!-- VIDEO PREVIEW -->
+        <div id="previewContainer">
+            <video id="preview" controls width="720" height="405">
+                <source src="" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!-- TIMELINE -->
+        <div id="timeline">
+            <h3>Timeline</h3>
+            <div id="clipsContainer">
+                <p>No clips added yet.</p>
+            </div>
+        </div>
+
+        <!-- TOOLS PANEL -->
+        <div id="toolsPanel">
+            <h3>Tools</h3>
+            <button onclick="trimClip()">Trim</button>
+            <button onclick="splitClip()">Split</button>
+            <button onclick="deleteClip()">Delete</button>
+            <button onclick="addTransition()">Add Transition</button>
+            <button onclick="adjustSpeed()">Adjust Speed</button>
+        </div>
+
+        <button onclick="goToExport()">Export Video</button>
+    </section>
+
+    <!-- ====== EXPORT SECTION ====== -->
+    <section id="export">
+        <h2>Export Your Video</h2>
+        <label for="resolution">Resolution:</label>
+        <select id="resolution">
+            <option value="1080">1080p</option>
+            <option value="720">720p</option>
+            <option value="480">480p</option>
+        </select>
+        <label for="format">Format:</label>
+        <select id="format">
+            <option value="mp4">MP4</option>
+            <option value="webm">WebM</option>
+        </select>
+        <button onclick="exportVideo()">Export</button>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <p>&copy; 2025 Kamui Video Editor</p>
+    </footer>
+
+    <!-- LINK JAVASCRIPT -->
+    <script src="app.js"></script>
+</body>
+</html>

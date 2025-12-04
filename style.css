@@ -1,0 +1,173 @@
+/* ====== GLOBAL STYLES ====== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* ====== HEADER ====== */
+header {
+    background-color: #121212;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #00ffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+}
+
+/* ====== SECTIONS ====== */
+section {
+    padding: 40px 30px;
+    border-bottom: 1px solid #333;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    color: #00ffff;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+/* ====== BUTTONS ====== */
+button {
+    padding: 10px 20px;
+    background-color: #00ffff;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 5px 0;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #00bfbf;
+}
+
+/* ====== UPLOAD SECTION ====== */
+#uploadedFiles div {
+    background-color: #2a2a2a;
+    padding: 8px 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#uploadedFiles div:hover {
+    background-color: #333;
+}
+
+/* ====== EDITOR WORKSPACE ====== */
+#editor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#previewContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#preview {
+    border: 2px solid #00ffff;
+    border-radius: 6px;
+    max-width: 100%;
+}
+
+/* ====== TIMELINE ====== */
+#timeline {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.timeline-clip {
+    background-color: #444;
+    padding: 8px 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.timeline-clip:hover {
+    background-color: #00ffff;
+    color: #1e1e1e;
+}
+
+/* ====== TOOLS PANEL ====== */
+#toolsPanel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ====== EXPORT SECTION ====== */
+#export select {
+    padding: 8px 10px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    border-top: 2px solid #333;
+    margin-top: 30px;
+    color: #888;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #editor {
+        gap: 15px;
+    }
+}
